@@ -1,0 +1,156 @@
+<div class="dynamic-content reservation-wrapper" id="main-content">
+	<div class="container">
+		<div class="row reservation  padding-wrapper">
+			<div class="hidden-xs col-md-7">
+				<div id="slider-res" class="owl-carousel owl-theme">
+					<figure class="item">
+						<img src="img/carpaccio.jpg" alt=""/>
+					</figure>
+					<figure class="item">
+						<img src="img/pizza1.jpg" alt=""/>
+					</figure>
+					<figure class="item">
+						<img src="img/pizza2.jpg" alt=""/>
+					</figure>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-5">
+				<div class="info-reservation">
+					<h1>Reserva</h1>
+					<p>
+						Reserva tu mesa seleccionando fecha y hora y te confirmaremos la misma usando el n&uacute;mero de tel&eacute;fono que indiques o tu email. 
+					</p>
+					<h1>Fecha</h1>
+					<div class="select-date">
+									<div class="select-time day"><span>11</span>
+										<select id="select-day" ng-model="reservation.date.day">
+											<option  value="1">1</option>
+											<option  value="2">2</option>
+											<option  value="3">3</option>
+											<option  value="4">4</option>
+											<option  value="5">5</option>
+											<option  value="6">6</option>
+											<option  value="7">7</option>
+											<option  value="8">8</option>
+											<option  value="9">9</option>
+											<option  value="10">10</option>
+											<option selected="selected" value="11">11</option>
+											<option  value="12">12</option>
+											<option  value="13">13</option>
+											<option  value="14">14</option>
+											<option  value="15">15</option>
+											<option  value="16">16</option>
+											<option  value="17">17</option>
+											<option  value="18">18</option>
+											<option  value="19">19</option>
+											<option  value="20">20</option>
+											<option  value="21">21</option>
+											<option  value="22">22</option>
+											<option  value="23">23</option>
+											<option  value="24">24</option>
+											<option  value="25">25</option>
+											<option  value="26">26</option>
+											<option  value="27">27</option>
+											<option  value="28">28</option>
+											<option  value="29">29</option>
+											<option  value="30">30</option>
+											<option  value="31">31</option>
+										</select>
+									</div> 
+									<div class="select-time month"><span>March</span>
+										<select id="select-month" ng-model="reservation.date.month">
+											<option  value="1">january</option>
+											<option  value="2">february</option>
+											<option selected="selected" value="3">march</option>
+											<option  value="4">april</option>
+											<option  value="5">may</option>
+											<option  value="6">june</option>
+											<option  value="7">july</option>
+											<option  value="8">august</option>
+											<option  value="9">september</option>
+											<option  value="10">october</option>
+											<option  value="11">november</option>
+											<option  value="12">december</option>
+										</select>
+									</div>
+									<div class="select-time year"><span>2014</span>
+										<select id="select-year" ng-model="reservation.date.year">
+											<option value="2014" selected="selected">2014</option>
+											<option value="2015">2015</option>
+											<option value="2016">2016</option>
+										</select>
+									</div><div class="clearfix visible-xs"></div>
+									<div class="select-time hour"><span>--</span>
+										<select id="select-hour" ng-model="reservation.date.hour">
+											<option selected="selected" value="--">--</option>
+											<option value="00">00</option>
+											<option value="01">01</option>
+											<option value="02">02</option>
+											<option value="03">03</option>
+											<option value="04">04</option>
+											<option value="05">05</option>
+											<option value="06">06</option>
+											<option value="07">07</option>
+											<option value="08">08</option>
+											<option value="09">09</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+										</select>
+									</div>
+									<div class="select-time minutes"><span>--</span>
+										<select id="select-minutes" ng-model="reservation.date.minutes">
+											<option selected="selected" value="--">--</option>
+											<option value="00">00</option>
+											<option value="10">10</option>
+											<option value="20">20</option>
+											<option value="30">30</option>
+											<option value="40">40</option>
+											<option value="50">50</option>
+										</select>
+									</div> 
+									<div class="select-time part">pm</div>
+								</div>
+					<h1>Detalles de la Reserva</h1>
+					<section class="form">
+						<form id="reservation-form" name="reservation-form" action="" method="post">
+							<!--<input type="hidden" name="day" id="day" value="<?php echo date('d'); ?>" />
+							<input type="hidden" name="month" id="month" value="<?php echo date('m'); ?>" />
+							<input type="hidden" name="year" id="year" value="<?php echo date('Y'); ?>" />
+							<input type="hidden" name="hour" id="hour" value="--" />
+							<input type="hidden" name="minute" id="minute" value="--" />
+							<input type="hidden" name="ampm" id="ampm" value="pm" />-->
+
+							<div class="input-wrapper name">
+								<input ng-model="reservation.name" class="contact-form" type="text" placeholder="Nombre" name="form-name" id="form-name">
+							</div>
+							<div class="input-wrapper email">
+								<input ng-model="reservation.email" class="contact-form" type="text" placeholder="E-mail" name="form-email" id="form-email">
+							</div>
+							<div class="input-wrapper phone">
+								<input ng-model="reservation.phone" class="contact-form" type="text" placeholder="Tel&eacute;fono" name="form-phone" id="form-phone">
+							</div>
+							<div class="input-wrapper amount">
+								<input ng-model="reservation.people" class="contact-form" type="text" placeholder="# de Personas" name="form-amount" id="form-amount">
+							</div>
+							<div class="input-wrapper message">
+								<textarea ng-model="reservation.message" class="contact-form" placeholder="Mensaje" name="form-message" id="form-message"></textarea>
+							</div>
+
+
+														
+							<div ng-class="{hidden: !sent}" class="alert alert-success">Tu mensaje de reserva ha sido enviado y te confirmaremos via email o al tel&eacute;fono que has dado.</div>
+							<div class="input-wrapper submit">
+								<input ng-click="saveMessage($event)" id="reservation-submit" type="submit" value="Confirmar" class="buttonform">
+							</div>
+						</form>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Google tracking Pixel -->
+<div ng-show="sent" style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt=""
+src="//www.googleadservices.com/pagead/conversion/960414686/?label=5pMmCIzouWAQ3of7yQM&amp;guid=ON&amp;script=0"/>
+</div>

@@ -1,0 +1,30 @@
+<div class="container padding-wrapper">
+<div class="row">
+	<div class="col-sm-12 col-md-2" style="padding-top:50px;">
+		<ul>
+			<li ng-repeat="reservation in reservations"><a href="" ng-class="{unread: !reservation.read}" ng-click="setCurrentReservation($event,reservation)">{{reservation.name}}</a></li>
+		</ul>
+	</div>
+	<div class="col-sm-12 col-md-8">
+					<div class=" col-sm-12 col-md-12">
+					<div class="vcard">
+						<h1>Mesa para {{currentReservation.people}} el {{currentReservation.date.day}}/{{currentReservation.date.month}}/{{currentReservation.date.year}} a las {{currentReservation.date.hour}}:{{currentReservation.date.minutes}}pm</h1>
+						<p class="adr">
+							<span class="company-name">{{currentReservation.name}}</span>
+							<span class="street-address">{{currentReservation.phone}}</span>
+						</p>
+						<p class="adr">
+							<span class="company-name">{{currentReservation.message}}</span>
+						</p>
+						<p>
+							<span class="email">email: <a class="email" href="mailto:{{currentReservation.email}}" title="">{{currentReservation.email}}</a></span>
+						</p>
+					</div>	
+				</div>
+					
+					
+				</div>
+	
+</div>
+	
+</div>

@@ -1,0 +1,27 @@
+<div class="container padding-wrapper">
+<div class="row">
+	<div class="col-sm-12 col-md-2" style="padding-top:50px;">
+		<ul>
+			<li ng-repeat="message in messages"><a href="" ng-class="{unread: !message.read}" ng-click="setCurrentMessage($event,message)">{{message.subject}}</a></li>
+		</ul>
+	</div>
+	<div class="col-sm-12 col-md-8">
+					<div class=" col-sm-12 col-md-12">
+					<div class="vcard">
+						<h1>{{currentMessage.subject}}</h1>
+						<p class="adr">
+							<span class="company-name">{{currentMessage.name}}</span>
+							<span class="street-address">{{currentMessage.message}}</span>
+						</p>
+						<p>
+							<span class="email">email: <a class="email" href="mailto:{{currentMessage.email}}" title="">{{currentMessage.email}}</a></span>
+						</p>
+					</div>	
+				</div>
+					
+					
+				</div>
+	
+</div>
+	
+</div>

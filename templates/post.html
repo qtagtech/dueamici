@@ -1,0 +1,22 @@
+<div class="dynamic-content container " id="main-content">
+	<div id="post" class="blog padding-wrapper">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<figure>
+					<img ng-src="{{article.article_image}}" alt=""/>
+				</figure>
+				<header>
+					<h1>{{article.title}}</h1>
+					<div class="data-post">
+						<span class="date-post">{{article.date}}</span>
+						<span class="author-post">Admin</span>
+					</div>
+				</header>
+				<section class="text-post">
+					<p ng-bind-html="article.body"></p>
+				</section>
+			</div>
+			<div class="col-md-offset-1 col-md-3"></div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,31 @@
+<div class="container padding-wrapper">
+<div class="row">
+	<div class="col-sm-12 col-md-2" style="padding-top:50px;">
+		<ul>
+			<li ng-repeat="deal in deals"><a href="" ng-click="editDeal($event,deal)">{{deal.title}}</a></li>
+			<li><a href="" ng-click="setNewDeal()">Nuevo Deal</a></li>
+		</ul>
+	</div>
+	<div class="col-sm-12 col-md-8 form">
+					<form id="contact-form" name="contact-form" action="?" method="post">
+						<h1>Deal Form</h1>
+						<div class="input-wrapper">
+							<input ng-model="deal.title" class="contact-form" type="text" placeholder="Titulo" name="title" id="title">
+						</div>
+						<div class="input-wrapper">
+							<input ng-model="deal.description" class="contact-form" type="text" placeholder="Descripcion" name="description" id="description">
+						</div>
+						<div class="input-wrapper">
+							<input ng-model="deal.main_image" class="contact-form" type="text" placeholder="Imagen Principal (1120x400)" name="main-image" id="main-image">
+						</div>
+						<div>
+							<input ng-click="saveDeal($event)" type="submit" value="Guardar" class="buttonform">
+						</div>	
+					</form>
+					
+					
+				</div>
+	
+</div>
+	
+</div>

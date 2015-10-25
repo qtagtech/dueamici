@@ -1,0 +1,41 @@
+<div class="container padding-wrapper">
+<div class="row">
+	<div class="col-sm-12 col-md-2" style="padding-top:50px;">
+		<ul>
+			<li ng-repeat="article in articles"><a href="" ng-click="editArticle($event,article)">{{article.title}}</a></li>
+			<li><a href="" ng-click="setNewArticle()">Nuevo Art&iacute;culo</a></li>
+		</ul>
+	</div>
+	<div class="col-sm-12 col-md-8 form">
+					<form id="contact-form" name="contact-form" action="?" method="post">
+						<h1>Article Form</h1>
+						<div class="input-wrapper">
+							<input ng-model="article.title" class="contact-form" type="text" placeholder="Titulo" name="title" id="title">
+						</div>
+						<div class="input-wrapper">
+							<input ng-model="article.main_image" class="contact-form" type="text" placeholder="Imagen Principal (1000x667)" name="main-image" id="main-image">
+						</div>
+						<div class="input-wrapper">
+							<input ng-model="article.secondary_image" class="contact-form" type="text" placeholder="Imagen Secundaria (620x150)" name="secondary-image" id="secondary-image">
+						</div>
+						<div class="input-wrapper">
+							<input ng-model="article.article_image" class="contact-form" type="text" placeholder="Imagen Articulo (753x150)" name="article-image" id="article-image">
+						</div>
+						<div class="input-wrapper">
+							<input ng-model="article.intro" class="contact-form" type="text" placeholder="Intro" name="intro" id="intro">
+						</div>
+						<div style="height: 250px; overflow: auto;">
+							<div text-angular ng-model="article.body"></div>
+						</div>
+						<div class="alert alert-success hidden">Your message was sent. Thank you!</div>
+						<div>
+							<input ng-click="saveArticle($event)" type="submit" value="Guardar" class="buttonform">
+						</div>	
+					</form>
+					
+					
+				</div>
+	
+</div>
+	
+</div>

@@ -1,0 +1,141 @@
+<div class="dynamic-content restaurant-wrapper" id="main-content">
+	<div class="container">
+		<div id="restaurant" class="padding-wrapper">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="square square-big">
+						<i class="fa fa-pencil-square-o "></i>
+						<a href="" ui-sref="app.blog">
+							<div class="square-bg" style="background-image:url({{article.main_image}})"></div>
+							<div class="square-header">
+								<p class="title">Lee nuestra</p>
+								<p class="description">&uacute;ltima <strong>entrada del blog</strong></p>
+							</div>
+							<div class="square-post">
+								<p class="title">{{article.title}}</p>
+								<p class="description">{{ article.intro | limitTo: 100 }}{{article.intro.length > 100 ? '...' : ''}} <strong>Leer m&aacute;s</strong></p>
+							</div>
+						</a>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="square">
+								<i class="fa fa-calendar-o"></i>
+								<a href="" ui-sref="app.reservation">
+									<div class="square-bg" style="background-image:url(img/frontpage1.jpg)"></div>
+									<div class="square-header">
+										<p class="title">Reserva</p>
+										<p class="description">tu <strong>mesa</strong></p>
+									</div>
+									<div class="square-post">
+										<p class="title">Ir a <strong>reservas <i class="fa fa-arrow-circle-o-right"></i></strong></p>
+									</div>
+								</a>
+							</div>	
+						</div>
+						<div class="col-md-6">
+							<div class="square">
+								<i class="fa fa-globe "></i>
+								<a href="" ui-sref="app.contact">
+									<div class="square-bg" style="background-image:url(img/carpaccio.jpg)"></div>
+									<div class="square-header">
+										<p class="title">Cont&aacute;ctate</p>
+										<p class="description">con <strong>nosotros</strong></p>
+									</div>
+									<div class="square-post">
+										<p class="title">Ir a<br/> <strong>contacto <i class="fa fa-arrow-circle-o-right"></i></strong></p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="controls"></div>
+							<div class="square">
+								<ul rn-carousel rn-carousel-controls rn-carousel-auto-slide="4" rn-carousel-index class="angular-carousel">
+
+							      <li ng-repeat="deal in deals">
+							        <img ng-src="{{deal.main_image}}">
+							        <div class="square-header">
+											<p class="title">{{deal.title}}</p>
+											<p class="description">{{deal.description}}</p>
+											<div rn-carousel-indicators ng-if="deals.length > 1" slides="deals" rn-carousel-index="carouselIndex"></div>
+									</div>
+							        
+							      </li>
+							    </ul>
+								<!--<div id="carousel-menu" class="carousel-menu owl-carousel owl-theme">
+									<div ng-repeat="deal in deals" class="item square-item">
+										<div class="square-bg" style="background-image:url(http://placehold.it/1120x400)"></div>
+										<div class="square-header">
+											<p class="title">{{deal.title}}</p>
+											<p class="description">two for one until <strong>sunday</strong></p>
+										</div>
+									</div>
+								</div>-->
+								<a href="" ui-sref="app.food">
+									<div class="square-post">
+										<p class="title">Go to <br/><strong>menu <i class="fa fa-arrow-circle-o-right"></i></strong></p>
+									</div>
+								</a>
+							
+						</div>
+						<div class="col-md-6">
+							<div class="square">
+								<div class="square-bg" style="background-image:url(img/pizza1.jpg)"></div>
+								<i class="fa fa-clock-o"></i>
+								<div class="square-header">
+									<p class="title">Abrimos de</p>
+									<p class="description"><strong>Mi&eacute;rcoles a Domingo</strong></p>				
+								</div>					
+								<div class="square-post">
+									<ul class="days">
+										<li><span>Lu.</span> <strong>cerrado</strong></li>
+										<li><span>Ma.</span> <strong>cerrado</strong></li>
+										<li><span>Mi.</span> <strong>5:00pm - 11:00pm</strong></li>
+										<li><span>Ju.</span> <strong>5:00pm - 11:00pm</strong></li>
+										<li><span>Vi.</span> <strong>5:00pm - 11:00pm</strong></li>
+										<li><span>Sa.</span> <strong>5:00pm - 11:00pm</strong></li>
+										<li><span>Do.</span> <strong>5:00pm - 9:00pm</strong></li>
+									</ul>
+								</div>							
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="square">
+								<i class="fa fa-group "></i>
+								<a href="index.php?p=team">
+									<div class="square-bg" style="background-image:url(img/especias1.jpg)"></div>
+									<div class="square-header">
+										<p class="title">Conoce</p>
+										<p class="description">nuestro <strong>equipo</strong></p>				
+									</div>			
+									<div class="square-post">
+										<p class="title">Ir a<br/> <strong>equipo <i class="fa fa-arrow-circle-o-right"></i></strong></p>
+									</div>							
+								</a>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+						<div class="col-md-12">
+							<div class="square">
+								<i class="fa fa-group "></i>
+								<div class="square-bg" style="background-image:url(img/porcion1.jpg)"></div>
+								<div class="square-header">
+									<p class="title">Pizza recomendada </p>
+									<p class="description">dolor sit amet, <strong>consectetur</strong></p>				
+								</div>
+								<div class="square-post">
+									<p class="title">Ir a<br/> <strong>Men&uacute; <i class="fa fa-arrow-circle-o-right"></i></strong></p>
+								</div>		
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

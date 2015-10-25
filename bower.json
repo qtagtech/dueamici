@@ -1,0 +1,27 @@
+{
+  "name": "dueamici2",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "authors": [
+    "juan david arroyave"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-ui-router": "ui-router#~0.2.15",
+    "firebase": "~2.3.1",
+    "textAngular": "~1.4.6",
+    "angular-sanitize": "~1.4.7"
+  }
+}

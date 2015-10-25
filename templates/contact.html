@@ -1,0 +1,69 @@
+<div class="dynamic-content contact-wrapper" id="main-content">
+	<section id="contact" class="padding-wrapper">
+		<div class="container">
+			<div id="map" class="map"></div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-4">
+					<div class="row">
+						<div class="col-sm-6 col-md-12">
+							<div class="info">
+								<h1>DUE AMICI</h1>
+								<p>Con el &aacute;nimo de hacer comida sin pretensiones, dos amigos traemos una propuesta de pizzas para todos, para disfrutar, simplemente, de un agradable momento del día. Traemos pizzas y un par de cosas más, para compartir nuestra buena comida con los amigos.</p>
+							</div>
+						</div>
+						<div class="col-sm-offset-1 col-sm-5 col-md-12 col-md-offset-0">
+							<div class="social-media">
+								<h1>S&iacute;guenos en</h1>
+								<ul class="social-icon">
+									<li>
+										<a href="https://www.facebook.com/dueamici.pizza"><i class="fa fa-facebook"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>	
+					</div>
+				</div>
+				<div class=" col-sm-6 col-md-4 col-md-offset-1">
+					<div class="vcard">
+						<h1>Direcci&oacute;n &amp; Tel&eacute;fono</h1>
+						<p class="adr">
+							<span class="company-name">Due Amici Pizzer&iacute;a</span>
+							<span class="street-address">Cll 49ª #64c-58</span>
+							<span class="postal-code">Medellin - Colombia</span>
+						</p>
+						<p>
+							<span class="email">email: <a class="email" href="mailto:contacto@dueamici.co" title="">contacto@dueamici.co</a></span>
+							<span class="tel">Tel.: <span>(+574) 230 56 02</span></span>
+						</p>
+					</div>	
+				</div>	
+				<div class="col-sm-offset-1 col-sm-5 col-md-3 col-md-offset-0 form">
+					<form id="contact-form" name="contact-form" action="?" method="post">
+						<h1>Cont&aacute;ctanos</h1>
+						<div class="input-wrapper">
+							<input ng-model="contact.name" class="contact-form" type="text" placeholder="Nombre" name="form-name" id="form-name">
+						</div>
+						<div class="input-wrapper">
+							<input ng-model="contact.email" class="contact-form" type="text" placeholder="E-mail" name="form-email" id="form-email">
+						</div>
+						<div class="input-wrapper">
+							<input ng-model="contact.subject" class="contact-form" type="text" placeholder="Motivo" name="form-subject" id="form-subject">
+						</div>
+						<div class="message">
+							<div class="input-wrapper">
+								<textarea ng-model="contact.message" class="contact-form" placeholder="Mensaje" name="form-message" id="form-message"></textarea>
+							</div>
+						</div>
+						
+						<div ng-class="{hidden: !sent}" class="alert alert-success">Tu mensaje ha sido enviado. &iexcl;Gracias!</div>
+						<div>
+							<input ng-click="saveMessage($event)" type="submit" value="Enviar" class="buttonform">
+						</div>	
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
